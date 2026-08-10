@@ -1,0 +1,27 @@
+:root {
+    /* Nurtured by Mel - Lilac Brand Colors */
+    --primary: #B79ACF;
+    --primary-dark: #80629A;
+    --secondary: #D8C5E8;
+
+    --lilac-light: #EDE4F4;
+    --lilac-soft: #F5EFF9;
+
+    --cream: #FFFBFF;
+    --cream-dark: #F7F1FA;
+    --white: #FFFFFF;
+
+    --brown: #3F3347;
+    --text: #403747;
+    --muted: #756A7D;
+    --border: #E2D7E8;
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --max-width: 1200px;
+    --radius: 12px;
+
+    --shadow:
+        0 8px 25px rgba(87, 65, 103, 0.12);
+}

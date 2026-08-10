@@ -1,0 +1,279 @@
+/* =========================================
+   NURTURED BY MEL
+   Lilac Brand Identity
+   ========================================= */
+
+
+/* Logo */
+
+.logo {
+    align-items: center;
+    color: var(--brown);
+    display: inline-flex;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+
+.logo-mark {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+
+.logo:hover .logo-mark {
+    transform: rotate(15deg) scale(1.1);
+}
+
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+
+.logo-text span {
+    color: var(--primary-dark);
+    font-size: 0.85em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+/* Navigation */
+
+.site-header {
+    background: rgba(255, 251, 255, 0.96);
+}
+
+
+.navigation a {
+    color: var(--brown);
+    position: relative;
+}
+
+
+.navigation a::after {
+    background: var(--primary);
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+
+.navigation a:hover::after,
+.navigation a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* Hero */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            var(--lilac-light),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--cream),
+            var(--lilac-soft)
+        );
+}
+
+
+.hero-image-placeholder {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            var(--secondary),
+            var(--primary-dark)
+        );
+    border: 10px solid var(--white);
+}
+
+
+/* Buttons */
+
+.button-primary {
+    background: var(--primary);
+    box-shadow:
+        0 5px 15px rgba(128, 98, 154, 0.25);
+}
+
+
+.button-primary:hover {
+    background: var(--primary-dark);
+}
+
+
+.button-secondary {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary-dark);
+}
+
+
+.button-secondary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+
+.button-light {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+
+.button-light:hover {
+    background: var(--lilac-light);
+}
+
+
+/* Section headings */
+
+.section-heading .eyebrow {
+    color: var(--primary-dark);
+}
+
+
+/* Feature Cards */
+
+.feature-card {
+    background:
+        linear-gradient(
+            145deg,
+            var(--white),
+            var(--lilac-soft)
+        );
+    border: 1px solid var(--border);
+}
+
+
+.feature-card:hover {
+    box-shadow:
+        0 15px 30px rgba(128, 98, 154, 0.15);
+}
+
+
+.feature-icon {
+    color: var(--primary-dark);
+}
+
+
+/* Quiz Banner */
+
+.quiz-banner {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+}
+
+
+/* Weather */
+
+.weather-card {
+    border: 1px solid var(--border);
+}
+
+
+/* Inspiration */
+
+.quote-card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--lilac-light),
+            var(--lilac-soft)
+        );
+    border: 1px solid var(--border);
+}
+
+
+/* Cart */
+
+.cart-count {
+    background: var(--primary-dark);
+}
+
+
+/* Footer */
+
+.site-footer {
+    background:
+        linear-gradient(
+            135deg,
+            #3F3347,
+            #594565
+        );
+}
+
+
+.footer-logo .logo-mark {
+    color: var(--secondary);
+}
+
+
+.footer-logo .logo-text {
+    color: var(--white);
+}
+
+
+.footer-logo .logo-text span {
+    color: var(--secondary);
+}
+
+
+/* Selection color */
+
+::selection {
+    background: var(--secondary);
+    color: var(--brown);
+}
+
+
+/* Smooth card animation */
+
+.feature-card,
+.product-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.feature-card:hover,
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .logo-mark,
+    .feature-card,
+    .product-card,
+    .button {
+        transition: none;
+    }
+}

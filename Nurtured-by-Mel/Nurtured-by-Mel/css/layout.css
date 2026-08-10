@@ -1,0 +1,376 @@
+/* =========================================
+   NURTURED BY MEL
+   Layout Styles
+   Lilac Brand Theme
+   ========================================= */
+
+
+/* =========================================
+   GLOBAL LAYOUT
+   ========================================= */
+
+.container {
+    width: min(92%, var(--max-width));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
+
+.site-header {
+    background: rgba(255, 251, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(128, 98, 154, 0.08);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 80px;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            var(--lilac-light),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--cream),
+            var(--lilac-soft)
+        );
+    display: grid;
+    min-height: 650px;
+    overflow: hidden;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    align-items: center;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+   ========================================= */
+
+.hero-buttons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+.section-heading {
+    margin-bottom: 3rem;
+    max-width: 650px;
+}
+
+.section-heading h2 {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================
+   FEATURE SECTION
+   ========================================= */
+
+.features {
+    background: var(--white);
+}
+
+.feature-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* =========================================
+   PRODUCTS SECTION
+   ========================================= */
+
+.featured {
+    background: var(--lilac-soft);
+}
+
+.product-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+/* =========================================
+   HAIR QUIZ BANNER
+   ========================================= */
+
+.quiz-banner {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+    padding: 4rem 0;
+}
+
+.quiz-banner-content {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   WEATHER SECTION
+   ========================================= */
+
+.weather {
+    background: var(--cream);
+}
+
+.weather-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-height: 120px;
+    padding: 2rem;
+}
+
+
+/* =========================================
+   INSPIRATION SECTION
+   ========================================= */
+
+.inspiration {
+    background: var(--lilac-soft);
+}
+
+.quote-card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--lilac-light),
+            var(--white)
+        );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background:
+        linear-gradient(
+            135deg,
+            #3F3347,
+            #594565
+        );
+    color: var(--white);
+    padding-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 2fr 1fr;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .feature-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 4rem 0;
+    }
+
+
+    /* Navigation */
+
+    .navigation {
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 20px rgba(128, 98, 154, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 1.25rem;
+        left: 0;
+        padding: 2rem;
+        position: absolute;
+        right: 0;
+        top: 80px;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 5rem 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-inline: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-buttons .button {
+        width: min(100%, 300px);
+    }
+
+
+    /* Hero image */
+
+    .hero-image {
+        order: -1;
+    }
+
+
+    /* Features & products */
+
+    .feature-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Quiz banner */
+
+    .quiz-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-items: center;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .navigation {
+        top: 70px;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .quote-card {
+        padding: 2rem 1.25rem;
+    }
+}

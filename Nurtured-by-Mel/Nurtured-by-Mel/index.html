@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Nurtured by Mel Hair Care provides nourishing hair-care products and personalized hair-care guidance."
+    >
+
+    <meta name="author" content="Nurtured by Mel">
+
+    <title>Nurtured by Mel | Hair Care</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a class="logo" href="index.html" aria-label="Nurtured by Mel home">
+                <span class="logo-mark" aria-hidden="true">✿</span>
+                <span class="logo-text">
+                    Nurtured <span>by Mel</span>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+            <ul
+                class="navigation"
+                id="primary-navigation"
+            >
+                <li>
+                    <a class="active" href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Shop</a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">Hair Quiz</a>
+                </li>
+
+                <li>
+                    <a href="booking.html">Consultation</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                        <span
+                            class="cart-count"
+                            id="cart-count"
+                            aria-label="Items in cart"
+                        >0</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content container">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        Nurture. Restore. Flourish.
+                    </p>
+
+                    <h1>
+                        Healthy hair begins
+                        with the right care.
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover nourishing hair-care products and
+                        personalized recommendations created to help
+                        you build a hair routine that works for you.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            class="button button-primary"
+                            href="products.html"
+                        >
+                            Shop Hair Care
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="quiz.html"
+                        >
+                            Take the Hair Quiz
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <div class="hero-image-placeholder">
+                        <span>NBM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        Why Nurtured by Mel?
+                    </p>
+
+                    <h2>
+                        Care designed around you
+                    </h2>
+
+                    <p>
+                        Your hair deserves a routine that understands
+                        what it needs.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon" aria-hidden="true">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Nourishing Care
+                        </h3>
+
+                        <p>
+                            Explore products selected to support
+                            healthy and beautiful hair.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon" aria-hidden="true">
+                            ♡
+                        </div>
+
+                        <h3>
+                            Personalized
+                        </h3>
+
+                        <p>
+                            Take our hair quiz and discover products
+                            that match your hair needs.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon" aria-hidden="true">
+                            ✿
+                        </div>
+
+                        <h3>
+                            Hair Education
+                        </h3>
+
+                        <p>
+                            Learn simple ways to build and maintain
+                            a healthy hair-care routine.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Products -->
+        <section class="featured section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        Shop
+                    </p>
+
+                    <h2>
+                        Featured hair care
+                    </h2>
+
+                    <p>
+                        Discover some of our recommended products.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="product-grid"
+                    id="featured-products"
+                >
+                    <!-- JavaScript will generate products here -->
+                </div>
+
+
+                <div class="center-button">
+
+                    <a
+                        class="button button-primary"
+                        href="products.html"
+                    >
+                        View All Products
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Hair Quiz CTA -->
+        <section class="quiz-banner">
+
+            <div class="container quiz-banner-content">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Not sure what you need?
+                    </p>
+
+                    <h2>
+                        Find your hair-care match.
+                    </h2>
+
+                    <p>
+                        Answer a few simple questions and receive
+                        personalized product recommendations.
+                    </p>
+
+                </div>
+
+                <a
+                    class="button button-light"
+                    href="quiz.html"
+                >
+                    Take the Quiz
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weather API section -->
+        <section class="weather section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        Today's Hair Weather
+                    </p>
+
+                    <h2>
+                        Weather & your hair
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="weather-card"
+                    id="weather-card"
+                >
+
+                    <p>
+                        Loading today's hair-care weather...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quote API section -->
+        <section class="inspiration section">
+
+            <div class="container">
+
+                <div
+                    class="quote-card"
+                    id="quote-card"
+                >
+
+                    <p class="eyebrow">
+                        Daily Inspiration
+                    </p>
+
+                    <blockquote id="quote">
+                        Loading inspiration...
+                    </blockquote>
+
+                    <p id="quote-author"></p>
+
+                    <button
+                        class="button button-secondary"
+                        id="new-quote"
+                        type="button"
+                    >
+                        New Inspiration
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a class="logo footer-logo" href="index.html">
+                    Nurtured by Mel
+                </a>
+
+                <p>
+                    Nourish your hair. Nurture yourself.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2>Quick Links</h2>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">Shop</a>
+                    </li>
+
+                    <li>
+                        <a href="quiz.html">Hair Quiz</a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">Consultation</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 Nurtured by Mel Hair Care.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
