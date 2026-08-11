@@ -25,3 +25,37 @@
     --shadow:
         0 8px 25px rgba(87, 65, 103, 0.12);
 }
+/* =====================================================
+   GLOBAL RESET
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
