@@ -19,16 +19,15 @@
 }
 
 
-/* =========================================
-   HEADER & NAVIGATION
-   ========================================= */
+/* =====================================================
+   NURTURED BY MEL
+   HEADER + NAVIGATION
+   ===================================================== */
 
 .site-header {
     background: rgba(255, 251, 255, 0.96);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 12px rgba(128, 98, 154, 0.08);
-    position: sticky;
-    top: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
 }
@@ -37,8 +36,177 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
     min-height: 80px;
+    position: relative;
+}
+
+
+/* Logo */
+
+.logo {
+    align-items: center;
+    color: var(--brown);
+    display: inline-flex;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-mark {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 1.7rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-mark {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+.logo-text span {
+    color: var(--primary-dark);
+    font-size: 0.85em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+/* =====================================================
+   DESKTOP NAVIGATION
+   ===================================================== */
+
+.navigation {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    color: var(--brown);
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.navigation a::after {
+    background: var(--primary);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   CART COUNT
+   ===================================================== */
+
+.cart-count {
+    align-items: center;
+    background: var(--primary-dark);
+    border-radius: 50%;
+    color: var(--white);
+    display: inline-flex;
+    font-size: 0.7rem;
+    height: 20px;
+    justify-content: center;
+    margin-left: 0.25rem;
+    min-width: 20px;
+    padding: 0 4px;
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+   ===================================================== */
+
+.menu-button {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--primary-dark);
+    cursor: pointer;
+    display: none;
+    font-size: 1.4rem;
+    padding: 0.4rem 0.65rem;
+}
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 10px 25px rgba(63, 51, 71, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        left: 0;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 100%;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation li {
+        width: 100%;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.8rem 0;
+        width: 100%;
+    }
+
+    .navigation a::after {
+        bottom: 4px;
+    }
+
 }
 
 
