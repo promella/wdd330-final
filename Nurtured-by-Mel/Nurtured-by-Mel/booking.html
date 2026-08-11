@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Book a personalised hair-care consultation with Nurtured by Mel."
+    >
+
+    <meta
+        name="author"
+        content="Nurtured by Mel"
+    >
+
+    <title>Book a Consultation | Nurtured by Mel</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <script
+        type="module"
+        src="js/main.js"
+        defer
+    ></script>
+
+    <script
+        type="module"
+        src="js/booking.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
+    <header class="site-header">
+
+        <nav
+            class="navbar container"
+            aria-label="Main navigation"
+        >
+
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Nurtured by Mel home"
+            >
+
+                <span
+                    class="logo-mark"
+                    aria-hidden="true"
+                >
+                    ✿
+                </span>
+
+                <span class="logo-text">
+                    Nurtured <span>by Mel</span>
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+
+            <ul
+                class="navigation"
+                id="primary-navigation"
+            >
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Hair Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="active"
+                        href="booking.html"
+                    >
+                        Consultation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                        <span
+                            class="cart-count"
+                            id="cart-count"
+                            aria-label="Items in cart"
+                        >
+                            0
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <main>
+
+        <!-- Page Hero -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    Personalised Hair Care
+                </p>
+
+                <h1>
+                    Book a Consultation
+                </h1>
+
+                <p>
+                    Get personalised guidance to help you
+                    build a hair-care routine that works
+                    for you.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Booking Section -->
+
+        <section class="booking-section section">
+
+            <div class="container booking-layout">
+
+
+                <!-- Information -->
+
+                <div class="booking-information">
+
+                    <p class="eyebrow">
+                        Your Hair Journey
+                    </p>
+
+                    <h2>
+                        Let's Nurture Your Hair
+                    </h2>
+
+                    <p>
+                        A consultation gives you the
+                        opportunity to discuss your hair-care
+                        goals and receive personalised
+                        recommendations.
+                    </p>
+
+
+                    <div class="booking-benefits">
+
+                        <div class="booking-benefit">
+
+                            <span aria-hidden="true">
+                                ✿
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Personalised Advice
+                                </h3>
+
+                                <p>
+                                    Discuss your individual
+                                    hair-care needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="booking-benefit">
+
+                            <span aria-hidden="true">
+                                ♡
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Routine Guidance
+                                </h3>
+
+                                <p>
+                                    Learn how to create a
+                                    simple hair-care routine.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="booking-benefit">
+
+                            <span aria-hidden="true">
+                                ✨
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Product Recommendations
+                                </h3>
+
+                                <p>
+                                    Find products that fit
+                                    your hair-care goals.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking Form -->
+
+                <div class="booking-form-card">
+
+                    <form
+                        id="booking-form"
+                    >
+
+                        <div class="form-group">
+
+                            <label for="booking-name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="booking-name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="booking-email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="booking-email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="booking-date">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="booking-date"
+                                name="date"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="booking-time">
+                                Preferred Time
+                            </label>
+
+                            <select
+                                id="booking-time"
+                                name="time"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a time
+                                </option>
+
+                                <option value="09:00">
+                                    9:00 AM
+                                </option>
+
+                                <option value="10:00">
+                                    10:00 AM
+                                </option>
+
+                                <option value="11:00">
+                                    11:00 AM
+                                </option>
+
+                                <option value="13:00">
+                                    1:00 PM
+                                </option>
+
+                                <option value="14:00">
+                                    2:00 PM
+                                </option>
+
+                                <option value="15:00">
+                                    3:00 PM
+                                </option>
+
+                                <option value="16:00">
+                                    4:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="booking-service">
+                                Consultation Type
+                            </label>
+
+                            <select
+                                id="booking-service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a consultation
+                                </option>
+
+                                <option value="hair-analysis">
+                                    Hair Analysis
+                                </option>
+
+                                <option value="routine">
+                                    Hair Routine Consultation
+                                </option>
+
+                                <option value="product">
+                                    Product Consultation
+                                </option>
+
+                                <option value="general">
+                                    General Hair Consultation
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="booking-notes">
+                                Additional Notes
+                            </label>
+
+                            <textarea
+                                id="booking-notes"
+                                name="notes"
+                                rows="5"
+                                placeholder="Tell us anything you would like us to know..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="button button-primary"
+                            type="submit"
+                        >
+                            Request Consultation
+                        </button>
+
+
+                        <p
+                            class="form-message"
+                            id="booking-message"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Consultation Note -->
+
+        <section class="info-banner section">
+
+            <div class="container">
+
+                <div class="quiz-banner">
+
+                    <p class="eyebrow">
+                        Not Sure Where to Start?
+                    </p>
+
+                    <h2>
+                        Take the Hair Quiz First
+                    </h2>
+
+                    <p>
+                        Answer a few questions and discover
+                        which hair-care approach may suit
+                        your needs.
+                    </p>
+
+                    <a
+                        class="button button-light"
+                        href="quiz.html"
+                    >
+                        Take Hair Quiz
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a
+                    class="logo footer-logo"
+                    href="index.html"
+                    aria-label="Nurtured by Mel home"
+                >
+
+                    <span
+                        class="logo-mark"
+                        aria-hidden="true"
+                    >
+                        ✿
+                    </span>
+
+                    <span class="logo-text">
+                        Nurtured <span>by Mel</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Nourish your hair. Nurture yourself.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Quick Links
+                </h2>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quiz.html">
+                            Hair Quiz
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 Nurtured by Mel Hair Care.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

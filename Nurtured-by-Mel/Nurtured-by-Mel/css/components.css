@@ -546,4 +546,493 @@
         transition: none;
     }
 
+}/* =====================================================
+   CONTACT PAGE
+   ===================================================== */
+
+.contact-layout {
+    align-items: start;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-information h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-detail {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    align-items: center;
+    background: var(--lilac-soft);
+    border-radius: 50%;
+    color: var(--primary-dark);
+    display: flex;
+    font-size: 1.2rem;
+    height: 45px;
+    justify-content: center;
+    width: 45px;
+}
+
+.contact-detail h3,
+.contact-detail p {
+    margin: 0;
+}
+
+.contact-detail h3 {
+    margin-bottom: 0.25rem;
+}
+
+
+/* Contact Form */
+
+.contact-form-card {
+    background:
+        linear-gradient(
+            145deg,
+            var(--white),
+            var(--lilac-soft)
+        );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    outline: 2px solid var(--lilac-light);
+}
+
+.form-message {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+/* API Quote */
+
+.quote-section {
+    background: var(--lilac-soft);
+}
+
+.quote-card {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+#api-quote {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.quote-author {
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+/* =====================================================
+   WEATHER HAIR-CARE SECTION
+   ===================================================== */
+
+.weather-section {
+    background: var(--lilac-soft);
+}
+
+.weather-form {
+    margin: 2rem auto;
+    max-width: 700px;
+}
+
+.weather-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.weather-search {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.weather-search input {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    min-width: 0;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.weather-search input:focus {
+    border-color: var(--primary);
+    outline: 2px solid var(--lilac-light);
+}
+
+.weather-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 2rem auto 0;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.weather-card h3 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather-details {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.weather-detail {
+    background: var(--lilac-soft);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.weather-detail > span {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.weather-detail strong {
+    display: block;
+    font-size: 0.85rem;
+}
+
+.weather-detail p {
+    color: var(--primary-dark);
+    font-weight: bold;
+    margin: 0.25rem 0 0;
+}
+
+.hair-weather-tip {
+    background:
+        linear-gradient(
+            135deg,
+            var(--lilac-light),
+            var(--lilac-soft)
+        );
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+}
+
+.hair-weather-tip h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.hair-weather-tip p {
+    margin: 0;
+}
+
+
+/* Weather Mobile */
+
+@media (max-width: 700px) {
+
+    .weather-search {
+        flex-direction: column;
+    }
+
+    .weather-search .button {
+        width: 100%;
+    }
+
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Contact Mobile */
+
+@media (max-width: 800px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+
+}
+/* =====================================================
+   BOOKING PAGE
+   ===================================================== */
+
+.booking-layout {
+    align-items: start;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.booking-information h2 {
+    margin-bottom: 1rem;
+}
+
+.booking-benefits {
+    margin-top: 2rem;
+}
+
+.booking-benefit {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.booking-benefit > span {
+    align-items: center;
+    background: var(--lilac-soft);
+    border-radius: 50%;
+    color: var(--primary-dark);
+    display: flex;
+    flex-shrink: 0;
+    height: 45px;
+    justify-content: center;
+    width: 45px;
+}
+
+.booking-benefit h3,
+.booking-benefit p {
+    margin: 0;
+}
+
+.booking-benefit h3 {
+    margin-bottom: 0.25rem;
+}
+
+.booking-form-card {
+    background:
+        linear-gradient(
+            145deg,
+            var(--white),
+            var(--lilac-soft)
+        );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+
+/* =====================================================
+   HAIR QUIZ
+   ===================================================== */
+
+.hair-quiz {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.quiz-question {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.quiz-question legend {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+.quiz-option {
+    align-items: center;
+    background: var(--lilac-soft);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 1rem;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.quiz-option:hover {
+    background: var(--lilac-light);
+    border-color: var(--primary);
+    transform: translateX(3px);
+}
+
+.quiz-option input {
+    accent-color: var(--primary);
+    height: 18px;
+    width: 18px;
+}
+
+.quiz-submit {
+    display: block;
+    margin: 2rem auto;
+}
+
+
+/* =====================================================
+   QUIZ RESULTS
+   ===================================================== */
+
+.quiz-result {
+    background:
+        linear-gradient(
+            145deg,
+            var(--white),
+            var(--lilac-soft)
+        );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.quiz-result h2 {
+    color: var(--primary-dark);
+}
+
+.result-recommendations {
+    display: grid;
+    gap: 0.75rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.recommendation-item {
+    align-items: center;
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.recommendation-item span {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+}
+
+.recommendation-item p {
+    margin: 0;
+}
+
+.result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.quiz-reset {
+    background: transparent;
+    border: 0;
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form-card {
+        padding: 1.5rem;
+    }
+
+    .quiz-result {
+        padding: 1.5rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+    .result-actions .button {
+        width: 100%;
+    }
+
 }

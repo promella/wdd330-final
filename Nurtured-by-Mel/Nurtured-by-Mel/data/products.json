@@ -1,0 +1,142 @@
+[
+    {
+        "id": "nbm001",
+        "name": "Aloe Vera Hair Treatment",
+        "category": "Treatment",
+        "description": "A soothing aloe vera treatment designed to add moisture and nourishment to your hair-care routine.",
+        "price": 149.99,
+        "image": "images/aloevera.webp",
+        "tags": [
+            "moisture",
+            "treatment",
+            "nourishment"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm002",
+        "name": "Black Hair Serum",
+        "category": "Serum",
+        "description": "A lightweight hair serum designed to complement a nourishing and protective hair-care routine.",
+        "price": 159.99,
+        "image": "images/blackserum.webp",
+        "tags": [
+            "serum",
+            "nourishment",
+            "shine"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm003",
+        "name": "Coconut Oil",
+        "category": "Oil",
+        "description": "Coconut oil designed to add moisture and nourishment to your regular hair-care routine.",
+        "price": 129.99,
+        "image": "images/coconutoil.webp",
+        "tags": [
+            "oil",
+            "moisture",
+            "nourishment"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm004",
+        "name": "Nurturing Conditioner",
+        "category": "Conditioner",
+        "description": "A nourishing conditioner designed to leave hair feeling soft, smooth and manageable.",
+        "price": 159.99,
+        "image": "images/conditioner.webp",
+        "tags": [
+            "conditioner",
+            "moisture",
+            "softness"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm005",
+        "name": "Curli Cream",
+        "category": "Styling",
+        "description": "A moisturising styling cream designed to support manageable and beautifully defined hair.",
+        "price": 169.99,
+        "image": "images/curlicream.webp",
+        "tags": [
+            "styling",
+            "definition",
+            "moisture"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm006",
+        "name": "Nurturing Hair Butter",
+        "category": "Moisturiser",
+        "description": "A rich hair butter created to provide moisture and nourishment for dry-feeling hair.",
+        "price": 149.99,
+        "image": "images/hairbutter.webp",
+        "tags": [
+            "butter",
+            "moisture",
+            "dry hair"
+        ],
+        "featured": false
+    },
+    {
+        "id": "nbm007",
+        "name": "Nourishing Hair Oil",
+        "category": "Oil",
+        "description": "A lightweight nourishing oil that can be incorporated into your regular hair-care routine.",
+        "price": 139.99,
+        "image": "images/hairoil.webp",
+        "tags": [
+            "oil",
+            "nourishment",
+            "shine"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm008",
+        "name": "Scalp Serum",
+        "category": "Scalp Care",
+        "description": "A scalp-care serum designed to complement a consistent and nourishing hair-care routine.",
+        "price": 179.99,
+        "image": "images/scalpserum.webp",
+        "tags": [
+            "scalp",
+            "serum",
+            "care"
+        ],
+        "featured": true
+    },
+    {
+        "id": "nbm009",
+        "name": "Shea Butter",
+        "category": "Moisturiser",
+        "description": "Rich shea butter for a nourishing and moisture-focused hair-care routine.",
+        "price": 139.99,
+        "image": "images/sheabutter.webp",
+        "tags": [
+            "shea butter",
+            "moisture",
+            "nourishment"
+        ],
+        "featured": false
+    },
+    {
+        "id": "nbm010",
+        "name": "Twist Cream",
+        "category": "Styling",
+        "description": "A moisturising styling cream designed to support twists and other protective hairstyles.",
+        "price": 169.99,
+        "image": "images/twistcream.webp",
+        "tags": [
+            "twists",
+            "styling",
+            "protective styling"
+        ],
+        "featured": true
+    }
+]

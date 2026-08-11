@@ -3,197 +3,451 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Shop Nurtured by Mel hair-care products including oils, shampoos, conditioners and treatments.">
-    <title>Shop | Nurtured by Mel Hair Care</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Shop nourishing hair-care products from Nurtured by Mel."
+    >
+
+    <meta
+        name="author"
+        content="Nurtured by Mel"
+    >
+
+    <title>Shop Hair Care | Nurtured by Mel</title>
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
-    <script type="module" src="js/products.js" defer></script>
+
+    <script
+        type="module"
+        src="js/main.js"
+        defer
+    ></script>
+
+    <script
+        type="module"
+        src="js/products.js"
+        defer
+    ></script>
 </head>
 
+
 <body>
-    <!-- Header -->
+
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
     <header class="site-header">
-        <nav class="navbar container" aria-label="Main navigation">
-            <a class="logo" href="index.html" aria-label="Nurtured by Mel home">
-                <span class="logo-mark" aria-hidden="true">
+
+        <nav
+            class="navbar container"
+            aria-label="Main navigation"
+        >
+
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Nurtured by Mel home"
+            >
+
+                <span
+                    class="logo-mark"
+                    aria-hidden="true"
+                >
                     ✿
                 </span>
+
                 <span class="logo-text">
                     Nurtured <span>by Mel</span>
                 </span>
+
             </a>
-            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
-                aria-controls="primary-navigation">
+
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
                 ☰
             </button>
-            <ul class="navigation" id="primary-navigation">
+
+
+            <ul
+                class="navigation"
+                id="primary-navigation"
+            >
+
                 <li>
                     <a href="index.html">
                         Home
                     </a>
                 </li>
+
                 <li>
-                    <a class="active" href="products.html">
+                    <a
+                        class="active"
+                        href="products.html"
+                    >
                         Shop
                     </a>
                 </li>
+
                 <li>
                     <a href="quiz.html">
                         Hair Quiz
                     </a>
                 </li>
+
                 <li>
                     <a href="booking.html">
                         Consultation
                     </a>
                 </li>
+
                 <li>
                     <a href="contact.html">
                         Contact
                     </a>
                 </li>
+
                 <li>
                     <a href="cart.html">
                         Cart
-                        <span class="cart-count" id="cart-count">0</span>
+                        <span
+                            class="cart-count"
+                            id="cart-count"
+                            aria-label="Items in cart"
+                        >
+                            0
+                        </span>
                     </a>
                 </li>
+
             </ul>
+
         </nav>
+
     </header>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
     <main>
-        <!-- Page Hero -->
+
+        <!-- Shop Hero -->
+
         <section class="page-hero">
+
             <div class="container">
+
                 <p class="eyebrow">
                     Nurture Your Hair
                 </p>
+
                 <h1>
                     Shop Hair Care
                 </h1>
+
                 <p>
-                    Discover products designed to help you
-                    build a nourishing hair-care routine.
+                    Explore our collection of nourishing
+                    products designed to help you build a
+                    simple and consistent hair-care routine.
                 </p>
+
             </div>
+
         </section>
-        <!-- Products -->
-        <section class="products-section section">
+
+
+        <!-- =================================================
+             PRODUCTS SECTION
+             ================================================= -->
+
+        <section
+            class="products-section section"
+            aria-labelledby="products-heading"
+        >
+
             <div class="container">
-                <!-- Search and Filters -->
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        Our Collection
+                    </p>
+
+                    <h2 id="products-heading">
+                        Find What Your Hair Needs
+                    </h2>
+
+                    <p>
+                        Search, filter and sort our
+                        hair-care collection.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     SEARCH AND FILTER CONTROLS
+                     ================================================= -->
+
                 <div class="product-controls">
-                    <div class="search-box">
+
+                    <!-- Search -->
+
+                    <div class="product-search">
+
                         <label for="product-search">
-                            Search products
+                            Search Products
                         </label>
-                        <input id="product-search" type="search" placeholder="Search hair care...">
+
+                        <input
+                            type="search"
+                            id="product-search"
+                            placeholder="Search hair-care products..."
+                            aria-label="Search products"
+                        >
+
                     </div>
-                    <div class="filter-box">
+
+
+                    <!-- Category -->
+
+                    <div class="product-filter">
+
                         <label for="category-filter">
                             Category
                         </label>
-                        <select id="category-filter">
-                            <option value="All">
-                                All Products
+
+                        <select
+                            id="category-filter"
+                            aria-label="Filter products by category"
+                        >
+
+                            <option value="all">
+                                All Categories
                             </option>
-                            <option value="Oils">
-                                Oils
-                            </option>
-                            <option value="Shampoo">
-                                Shampoo
-                            </option>
-                            <option value="Conditioners">
-                                Conditioners
-                            </option>
-                            <option value="Treatments">
-                                Treatments
-                            </option>
+
                         </select>
+
                     </div>
-                    <div class="filter-box">
+
+
+                    <!-- Sorting -->
+
+                    <div class="product-sort">
+
                         <label for="sort-products">
-                            Sort by
+                            Sort By
                         </label>
-                        <select id="sort-products">
+
+                        <select
+                            id="sort-products"
+                            aria-label="Sort products"
+                        >
+
                             <option value="default">
-                                Recommended
+                                Sort Products
                             </option>
+
+                            <option value="featured">
+                                Featured
+                            </option>
+
+                            <option value="name-asc">
+                                Name: A-Z
+                            </option>
+
                             <option value="price-low">
                                 Price: Low to High
                             </option>
+
                             <option value="price-high">
                                 Price: High to Low
                             </option>
-                            <option value="name">
-                                Name
-                            </option>
+
                         </select>
+
                     </div>
+
                 </div>
-                <p class="results-message" id="results-message" aria-live="polite">
-                    6 products found
-                </p>
-                <!-- Dynamic Product Grid -->
-                <div class="product-grid" id="product-container">
-                    <!-- JavaScript inserts products here -->
+
+
+                <!-- =================================================
+                     PRODUCT MESSAGE
+                     ================================================= -->
+
+                <p
+                    id="product-message"
+                    class="product-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                ></p>
+
+
+                <!-- =================================================
+                     PRODUCT GRID
+                     ================================================= -->
+
+                <div
+                    class="product-grid"
+                    id="product-grid"
+                >
+                    <!-- Products are generated by products.js -->
                 </div>
-                <!-- Cart Notification -->
-                <div class="cart-notification" id="cart-notification" role="status" aria-live="polite"></div>
+
             </div>
+
         </section>
+
+
+        <!-- =================================================
+             QUIZ BANNER
+             ================================================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="quiz-banner">
+
+                    <p class="eyebrow">
+                        Need Help Choosing?
+                    </p>
+
+                    <h2>
+                        Find Your Hair-Care Match
+                    </h2>
+
+                    <p>
+                        Take our quick hair quiz to discover
+                        a personalised starting point for
+                        your routine.
+                    </p>
+
+                    <a
+                        class="button button-light"
+                        href="quiz.html"
+                    >
+                        Take the Hair Quiz
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
-    <!-- Footer -->
+
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
     <footer class="site-footer">
+
         <div class="container footer-content">
+
             <div>
-                <a class="logo footer-logo" href="index.html">
-                    <span class="logo-mark" aria-hidden="true">
+
+                <a
+                    class="logo footer-logo"
+                    href="index.html"
+                    aria-label="Nurtured by Mel home"
+                >
+
+                    <span
+                        class="logo-mark"
+                        aria-hidden="true"
+                    >
                         ✿
                     </span>
+
                     <span class="logo-text">
                         Nurtured <span>by Mel</span>
                     </span>
+
                 </a>
+
                 <p>
                     Nourish your hair. Nurture yourself.
                 </p>
+
             </div>
+
+
             <div>
-                <h2>Quick Links</h2>
+
+                <h2>
+                    Quick Links
+                </h2>
+
                 <ul class="footer-links">
+
                     <li>
                         <a href="index.html">
                             Home
                         </a>
                     </li>
+
                     <li>
                         <a href="products.html">
                             Shop
                         </a>
                     </li>
+
                     <li>
                         <a href="quiz.html">
                             Hair Quiz
                         </a>
                     </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Consultation
+                        </a>
+                    </li>
+
                     <li>
                         <a href="contact.html">
                             Contact
                         </a>
                     </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="copyright">
+
             <p>
                 &copy; 2026 Nurtured by Mel Hair Care.
                 All rights reserved.
             </p>
+
         </div>
+
     </footer>
+
 </body>
 
 </html>

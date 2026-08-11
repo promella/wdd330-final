@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Take the Nurtured by Mel hair quiz to discover a personalised hair-care routine."
+    >
+
+    <meta
+        name="author"
+        content="Nurtured by Mel"
+    >
+
+    <title>Hair Quiz | Nurtured by Mel</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <script
+        type="module"
+        src="js/main.js"
+        defer
+    ></script>
+
+    <script
+        type="module"
+        src="js/quiz.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
+    <header class="site-header">
+
+        <nav
+            class="navbar container"
+            aria-label="Main navigation"
+        >
+
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Nurtured by Mel home"
+            >
+
+                <span
+                    class="logo-mark"
+                    aria-hidden="true"
+                >
+                    ✿
+                </span>
+
+                <span class="logo-text">
+                    Nurtured <span>by Mel</span>
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+
+            <ul
+                class="navigation"
+                id="primary-navigation"
+            >
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="active"
+                        href="quiz.html"
+                    >
+                        Hair Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Consultation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                        <span
+                            class="cart-count"
+                            id="cart-count"
+                            aria-label="Items in cart"
+                        >
+                            0
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <main>
+
+        <!-- Page Hero -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    Your Hair Journey
+                </p>
+
+                <h1>
+                    Find Your Hair-Care Match
+                </h1>
+
+                <p>
+                    Answer a few simple questions and
+                    receive a personalised starting point
+                    for your hair-care routine.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quiz -->
+
+        <section class="quiz-section section">
+
+            <div class="container">
+
+                <form
+                    class="hair-quiz"
+                    id="hair-quiz"
+                >
+
+
+                    <!-- Question 1 -->
+
+                    <fieldset class="quiz-question">
+
+                        <legend>
+                            1. How would you describe your
+                            scalp?
+                        </legend>
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="scalp"
+                                value="dry"
+                                required
+                            >
+
+                            <span>
+                                Dry or sometimes flaky
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="scalp"
+                                value="normal"
+                            >
+
+                            <span>
+                                Balanced and comfortable
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="scalp"
+                                value="oily"
+                            >
+
+                            <span>
+                                Oily or gets greasy quickly
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Question 2 -->
+
+                    <fieldset class="quiz-question">
+
+                        <legend>
+                            2. What is your biggest hair-care
+                            goal?
+                        </legend>
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="goal"
+                                value="moisture"
+                                required
+                            >
+
+                            <span>
+                                More moisture and softness
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="goal"
+                                value="growth"
+                            >
+
+                            <span>
+                                Supporting healthy growth
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="goal"
+                                value="strength"
+                            >
+
+                            <span>
+                                Strength and reducing breakage
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="goal"
+                                value="definition"
+                            >
+
+                            <span>
+                                Definition and manageability
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Question 3 -->
+
+                    <fieldset class="quiz-question">
+
+                        <legend>
+                            3. How often do you usually wash
+                            your hair?
+                        </legend>
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="wash"
+                                value="often"
+                                required
+                            >
+
+                            <span>
+                                Several times a week
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="wash"
+                                value="weekly"
+                            >
+
+                            <span>
+                                About once a week
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="wash"
+                                value="less"
+                            >
+
+                            <span>
+                                Every two weeks or less
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Question 4 -->
+
+                    <fieldset class="quiz-question">
+
+                        <legend>
+                            4. How does your hair usually feel
+                            after washing?
+                        </legend>
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="feel"
+                                value="dry"
+                                required
+                            >
+
+                            <span>
+                                Dry or rough
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="feel"
+                                value="balanced"
+                            >
+
+                            <span>
+                                Soft and balanced
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="feel"
+                                value="oily"
+                            >
+
+                            <span>
+                                Oily again fairly quickly
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Question 5 -->
+
+                    <fieldset class="quiz-question">
+
+                        <legend>
+                            5. What type of routine do you prefer?
+                        </legend>
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="routine"
+                                value="simple"
+                                required
+                            >
+
+                            <span>
+                                Simple and quick
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="routine"
+                                value="balanced"
+                            >
+
+                            <span>
+                                A balanced routine
+                            </span>
+
+                        </label>
+
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="routine"
+                                value="detailed"
+                            >
+
+                            <span>
+                                I enjoy a detailed routine
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+
+                    <button
+                        class="button button-primary quiz-submit"
+                        type="submit"
+                    >
+                        Show My Hair-Care Match
+                    </button>
+
+                </form>
+
+
+                <!-- Quiz Result -->
+
+                <section
+                    class="quiz-result"
+                    id="quiz-result"
+                    hidden
+                    aria-live="polite"
+                >
+
+                    <p class="eyebrow">
+                        Your Nurtured Match
+                    </p>
+
+                    <h2 id="result-title">
+                        Your Hair-Care Match
+                    </h2>
+
+                    <p id="result-description">
+                    </p>
+
+
+                    <div
+                        class="result-recommendations"
+                        id="result-recommendations"
+                    >
+                    </div>
+
+
+                    <div class="result-actions">
+
+                        <a
+                            class="button button-primary"
+                            href="products.html"
+                        >
+                            Explore Products
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="booking.html"
+                        >
+                            Book a Consultation
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        class="quiz-reset"
+                        id="quiz-reset"
+                        type="button"
+                    >
+                        Retake Quiz
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a
+                    class="logo footer-logo"
+                    href="index.html"
+                    aria-label="Nurtured by Mel home"
+                >
+
+                    <span
+                        class="logo-mark"
+                        aria-hidden="true"
+                    >
+                        ✿
+                    </span>
+
+                    <span class="logo-text">
+                        Nurtured <span>by Mel</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Nourish your hair. Nurture yourself.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Quick Links
+                </h2>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quiz.html">
+                            Hair Quiz
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 Nurtured by Mel Hair Care.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
