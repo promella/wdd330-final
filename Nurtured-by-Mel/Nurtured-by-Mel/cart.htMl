@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="View and manage your Nurtured by Mel hair-care shopping cart.">
+
+    <meta name="author" content="Nurtured by Mel">
+
+    <title>Your Cart | Nurtured by Mel</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <script type="module" src="js/cart.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a class="logo" href="index.html" aria-label="Nurtured by Mel home">
+
+                <span class="logo-mark" aria-hidden="true">
+                    ✿
+                </span>
+
+                <span class="logo-text">
+                    Nurtured <span>by Mel</span>
+                </span>
+
+            </a>
+
+
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-navigation">
+                ☰
+            </button>
+
+
+            <ul class="navigation" id="primary-navigation">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Hair Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Consultation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active" href="cart.html">
+                        Cart
+
+                        <span class="cart-count" id="cart-count" aria-label="Items in cart">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <main>
+
+        <!-- Page Hero -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    Your Nurtured Collection
+                </p>
+
+                <h1>
+                    Your Cart
+                </h1>
+
+                <p>
+                    Review your selected hair-care products
+                    before checkout.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Cart -->
+
+        <section class="cart-section section">
+
+            <div class="container">
+
+                <!-- Empty Cart -->
+
+                <div class="empty-cart" id="empty-cart" hidden>
+
+                    <div class="empty-cart-icon" aria-hidden="true">
+                        ✿
+                    </div>
+
+                    <h2>
+                        Your cart is empty
+                    </h2>
+
+                    <p>
+                        Discover something beautiful for
+                        your hair-care routine.
+                    </p>
+
+                    <a class="button button-primary" href="products.html">
+                        Explore Hair Care
+                    </a>
+
+                </div>
+
+
+                <!-- Cart Layout -->
+
+                <div class="cart-layout" id="cart-layout">
+
+                    <!-- Cart Products -->
+
+                    <div class="cart-items-section">
+
+                        <div class="cart-heading">
+
+                            <h2>
+                                Your Products
+                            </h2>
+
+                            <p id="cart-item-count" aria-live="polite">
+                                0 items
+                            </p>
+
+                        </div>
+
+
+                        <div class="cart-items" id="cart-items" aria-live="polite">
+                            <!-- JavaScript generates cart items here -->
+                        </div>
+
+
+                        <a class="continue-shopping" href="products.html">
+                            ← Continue Shopping
+                        </a>
+
+                    </div>
+
+
+                    <!-- Order Summary -->
+
+                    <aside class="cart-summary" aria-labelledby="summary-heading">
+
+                        <h2 id="summary-heading">
+                            Order Summary
+                        </h2>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="cart-subtotal">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="cart-delivery">
+                                Calculated at checkout
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="cart-total">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+                        <button class="button button-primary checkout-button" id="checkout-button" type="button">
+                            Proceed to Checkout
+                        </button>
+
+
+                        <p class="checkout-note">
+                            This is a student final-project
+                            demonstration. No real payment
+                            will be processed.
+                        </p>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Checkout Demonstration -->
+
+        <div class="checkout-message" id="checkout-message" role="dialog" aria-modal="true"
+            aria-labelledby="checkout-message-title" hidden>
+
+            <div class="checkout-message-content">
+
+                <button class="close-message" id="close-message" type="button" aria-label="Close checkout message">
+                    ×
+                </button>
+
+
+                <div class="checkout-message-icon" aria-hidden="true">
+                    ✿
+                </div>
+
+
+                <h2 id="checkout-message-title">
+                    Checkout Demo
+                </h2>
+
+
+                <p>
+                    Thank you for choosing
+                    Nurtured by Mel.
+                </p>
+
+
+                <p>
+                    This project demonstrates the shopping
+                    experience, but real payments are not
+                    processed.
+                </p>
+
+
+                <button class="button button-primary" id="close-checkout" type="button">
+                    Continue Shopping
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a class="logo footer-logo" href="index.html" aria-label="Nurtured by Mel home">
+
+                    <span class="logo-mark" aria-hidden="true">
+                        ✿
+                    </span>
+
+                    <span class="logo-text">
+                        Nurtured <span>by Mel</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Nourish your hair. Nurture yourself.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Quick Links
+                </h2>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quiz.html">
+                            Hair Quiz
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 Nurtured by Mel Hair Care.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

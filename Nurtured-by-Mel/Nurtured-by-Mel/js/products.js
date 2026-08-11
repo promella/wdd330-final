@@ -82,8 +82,7 @@ function displayProducts(productList) {
     addCartListeners();
     if (resultsMessage) {
         resultsMessage.textContent =
-            `${productList.length} product${
-                productList.length === 1 ? "" : "s"
+            `${productList.length} product${productList.length === 1 ? "" : "s"
             } found`;
     }
 }
