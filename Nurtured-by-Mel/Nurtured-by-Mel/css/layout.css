@@ -173,6 +173,22 @@
     .menu-button {
         display: block;
     }
+ @media (max-width: 700px) {
+
+    .hero-image {
+        margin-top: 2rem;
+        min-height: 320px;
+    }
+
+    .hero-image img {
+        max-width: 330px;
+    }
+
+    .hero-image-badge {
+        bottom: 10px;
+        right: 5%;
+    }
+}
 
     .navigation {
         background: var(--white);
@@ -244,12 +260,64 @@
     max-width: 650px;
 }
 
+
 .hero-image {
     align-items: center;
     display: flex;
     justify-content: center;
+    min-height: 420px;
+    position: relative;
 }
 
+.hero-image img {
+    aspect-ratio: 1 / 1;
+    border: 10px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 20px 50px rgba(128, 98, 154, 0.2);
+    height: auto;
+    max-width: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hero-image-badge {
+    align-items: center;
+    background: var(--white);
+    border-radius: 1rem;
+    bottom: 35px;
+    box-shadow: 0 10px 30px rgba(128, 98, 154, 0.18);
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    position: absolute;
+    right: 0;
+}
+
+.hero-image-badge > span {
+    align-items: center;
+    background: var(--lilac-light);
+    border-radius: 50%;
+    color: var(--primary-dark);
+    display: flex;
+    font-size: 1.4rem;
+    height: 45px;
+    justify-content: center;
+    width: 45px;
+}
+
+.hero-image-badge strong,
+.hero-image-badge small {
+    display: block;
+}
+
+.hero-image-badge strong {
+    color: var(--brown);
+}
+
+.hero-image-badge small {
+    color: var(--primary-dark);
+    margin-top: 0.2rem;
+}
 
 /* =========================================
    HERO BUTTONS
