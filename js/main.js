@@ -4,7 +4,7 @@
    Final Web Application Project
    ===================================================== */
 
-/
+
 
 const menuButton =
     document.querySelector(".menu-button");
@@ -42,9 +42,6 @@ function setupNavigation() {
     });
 
 }
-
-/
-
 function getCart() {
 
     try {
