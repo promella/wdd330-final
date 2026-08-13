@@ -106,7 +106,7 @@ const featuredProducts = [
 
     {
         id: 2,
-        name: "Mel Moisture Shampoo",
+        name: "Mel Natural Shampoo",
         category: "Shampoo",
         price: 129.99,
         image: "images/shampoo.webp",
