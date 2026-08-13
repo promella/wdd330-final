@@ -2,21 +2,13 @@
    NURTURED BY MEL
    Products Page
    Vanilla JavaScript
-   ===================================================== */
+   ===================================================== *
 
-
-/* =====================================================
-   CONFIGURATION
-   ===================================================== */
 
 const PRODUCTS_URL = "data/products.json";
 
 const CART_KEY = "nurturedByMelCart";
 
-
-/* =====================================================
-   DOM ELEMENTS
-   ===================================================== */
 
 const productGrid =
     document.querySelector("#product-grid");
