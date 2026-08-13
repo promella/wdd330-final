@@ -1,8 +1,8 @@
 /* =====================================================
-   NURTURED BY MEL
-   Products Page
-   Vanilla JavaScript
-   ===================================================== *
+    NURTURED BY MEL
+    Products Page
+    Vanilla JavaScript
+    ===================================================== */
 
 
 const PRODUCTS_URL = "data/products.json";
