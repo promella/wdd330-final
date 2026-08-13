@@ -15,11 +15,11 @@
     },
     {
         "id": "nbm002",
-        "name": "Black Hair Serum",
+        "name": "Black Caster Oil",
         "category": "Serum",
         "description": "A lightweight hair serum designed to complement a nourishing and protective hair-care routine.",
         "price": 159.99,
-        "image": "images/blackserum.webp",
+        "image": "images/blackcasteroil.webp",
         "tags": [
             "serum",
             "nourishment",
@@ -61,7 +61,7 @@
         "category": "Styling",
         "description": "A moisturising styling cream designed to support manageable and beautifully defined hair.",
         "price": 169.99,
-        "image": "images/curlicream.webp",
+        "image": "images/curlcream.webp",
         "tags": [
             "styling",
             "definition",
