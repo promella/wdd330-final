@@ -1,12 +1,6 @@
 /* =====================================================
    NURTURED BY MEL
    External API JavaScript Module
-   Final Web Application Project
-   ===================================================== */
-
-
-/* =====================================================
-   API URLS
    ===================================================== */
 
 const QUOTE_API =
@@ -24,45 +18,21 @@ const WEATHER_API =
    ===================================================== */
 
 const quoteText =
-    document.querySelector("#api-quote");
+    document.querySelector("#quote");
 
 const quoteAuthor =
-    document.querySelector("#api-author");
+    document.querySelector("#quote-author");
 
 const newQuoteButton =
     document.querySelector("#new-quote");
 
 
 /* =====================================================
-   WEATHER ELEMENTS
+   WEATHER ELEMENT
    ===================================================== */
 
-const weatherForm =
-    document.querySelector("#weather-form");
-
-const cityInput =
-    document.querySelector("#city-input");
-
-const weatherResult =
-    document.querySelector("#weather-result");
-
-const weatherCity =
-    document.querySelector("#weather-city");
-
-const weatherTemperature =
-    document.querySelector("#weather-temperature");
-
-const weatherHumidity =
-    document.querySelector("#weather-humidity");
-
-const weatherWind =
-    document.querySelector("#weather-wind");
-
-const weatherCondition =
-    document.querySelector("#weather-condition");
-
-const hairTip =
-    document.querySelector("#hair-tip");
+const weatherCard =
+    document.querySelector("#weather-card");
 
 
 /* =====================================================
@@ -71,14 +41,16 @@ const hairTip =
 
 async function getQuote() {
 
-    if (!quoteText || !quoteAuthor) {
+    if (!quoteText) {
         return;
     }
 
     quoteText.textContent =
         "Loading your inspiration...";
 
-    quoteAuthor.textContent = "";
+    if (quoteAuthor) {
+        quoteAuthor.textContent = "";
+    }
 
     try {
 
@@ -97,8 +69,10 @@ async function getQuote() {
         quoteText.textContent =
             `"${data.content}"`;
 
-        quoteAuthor.textContent =
-            `— ${data.author}`;
+        if (quoteAuthor) {
+            quoteAuthor.textContent =
+                `— ${data.author}`;
+        }
 
     } catch (error) {
 
@@ -110,15 +84,16 @@ async function getQuote() {
         quoteText.textContent =
             "Take time to care for yourself and your hair.";
 
-        quoteAuthor.textContent =
-            "Nurtured by Mel";
-
+        if (quoteAuthor) {
+            quoteAuthor.textContent =
+                "Nurtured by Mel";
+        }
     }
 }
 
 
 /* =====================================================
-   WEATHER CODE
+   WEATHER DESCRIPTION
    ===================================================== */
 
 function getWeatherDescription(code) {
@@ -126,52 +101,36 @@ function getWeatherDescription(code) {
     const weatherCodes = {
 
         0: "Clear sky",
-
         1: "Mainly clear",
-
         2: "Partly cloudy",
-
         3: "Overcast",
-
         45: "Foggy",
-
         48: "Foggy",
-
         51: "Light drizzle",
-
         53: "Moderate drizzle",
-
         55: "Heavy drizzle",
-
         61: "Light rain",
-
         63: "Moderate rain",
-
         65: "Heavy rain",
-
         71: "Light snow",
-
         73: "Moderate snow",
-
         75: "Heavy snow",
-
         80: "Light rain showers",
-
         81: "Moderate rain showers",
-
         82: "Heavy rain showers",
-
         95: "Thunderstorm"
 
     };
 
-    return weatherCodes[code] ||
-        "Mixed weather conditions";
+    return (
+        weatherCodes[code] ||
+        "Mixed weather conditions"
+    );
 }
 
 
 /* =====================================================
-   HAIR-CARE WEATHER TIP
+   HAIR-CARE TIP
    ===================================================== */
 
 function getHairTip(humidity) {
@@ -228,7 +187,6 @@ async function findCity(city) {
     }
 
     return data.results[0];
-
 }
 
 
@@ -238,14 +196,15 @@ async function findCity(city) {
 
 async function getWeather(city) {
 
-    if (!weatherResult) {
+    if (!weatherCard) {
         return;
     }
 
-    weatherResult.hidden = false;
-
-    weatherResult.innerHTML =
-        "<p>Loading weather information...</p>";
+    weatherCard.innerHTML = `
+        <p>
+            Loading today's weather...
+        </p>
+    `;
 
     try {
 
@@ -272,57 +231,99 @@ async function getWeather(city) {
         const current =
             data.current;
 
+        const temperature =
+            Math.round(
+                current.temperature_2m
+            );
 
-        if (weatherCity) {
+        const humidity =
+            current.relative_humidity_2m;
 
-            weatherCity.textContent =
-                `${location.name}, ${location.country}`;
+        const wind =
+            Math.round(
+                current.wind_speed_10m
+            );
 
-        }
+        const condition =
+            getWeatherDescription(
+                current.weather_code
+            );
 
-
-        if (weatherTemperature) {
-
-            weatherTemperature.textContent =
-                `${Math.round(current.temperature_2m)}°C`;
-
-        }
-
-
-        if (weatherHumidity) {
-
-            weatherHumidity.textContent =
-                `${current.relative_humidity_2m}%`;
-
-        }
+        const tip =
+            getHairTip(humidity);
 
 
-        if (weatherWind) {
+        weatherCard.innerHTML = `
 
-            weatherWind.textContent =
-                `${Math.round(current.wind_speed_10m)} km/h`;
+            <div class="weather-content">
 
-        }
+                <div class="weather-main">
+
+                    <p class="weather-location">
+                        ${location.name},
+                        ${location.country}
+                    </p>
+
+                    <p class="weather-temperature">
+                        ${temperature}°C
+                    </p>
+
+                    <p class="weather-condition">
+                        ${condition}
+                    </p>
+
+                </div>
 
 
-        if (weatherCondition) {
+                <div class="weather-details">
 
-            weatherCondition.textContent =
-                getWeatherDescription(
-                    current.weather_code
-                );
+                    <div class="weather-detail">
 
-        }
+                        <span
+                            class="weather-detail-label"
+                        >
+                            Humidity
+                        </span>
+
+                        <strong>
+                            ${humidity}%
+                        </strong>
+
+                    </div>
 
 
-        if (hairTip) {
+                    <div class="weather-detail">
 
-            hairTip.textContent =
-                getHairTip(
-                    current.relative_humidity_2m
-                );
+                        <span
+                            class="weather-detail-label"
+                        >
+                            Wind
+                        </span>
 
-        }
+                        <strong>
+                            ${wind} km/h
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hair-weather-tip">
+
+                    <p class="eyebrow">
+                        Hair-care tip
+                    </p>
+
+                    <p>
+                        ${tip}
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
 
     } catch (error) {
 
@@ -331,39 +332,24 @@ async function getWeather(city) {
             error
         );
 
-        weatherResult.innerHTML = `
-            <p>
-                We couldn't find weather information
-                for that location. Please try another city.
-            </p>
+        weatherCard.innerHTML = `
+
+            <div class="weather-error">
+
+                <h3>
+                    Weather unavailable
+                </h3>
+
+                <p>
+                    We couldn't load today's weather.
+                    Please try again later.
+                </p>
+
+            </div>
+
         `;
-
     }
-
 }
-
-
-/* =====================================================
-   WEATHER FORM
-   ===================================================== */
-
-weatherForm?.addEventListener(
-    "submit",
-    (event) => {
-
-        event.preventDefault();
-
-        const city =
-            cityInput?.value.trim();
-
-        if (!city) {
-            return;
-        }
-
-        getWeather(city);
-
-    }
-);
 
 
 /* =====================================================
@@ -381,3 +367,12 @@ newQuoteButton?.addEventListener(
    ===================================================== */
 
 getQuote();
+
+/*
+   Johannesburg, South Africa
+   Approximate coordinates:
+   Latitude: -26.2041
+   Longitude: 28.0473
+*/
+
+getWeather("Johannesburg");
